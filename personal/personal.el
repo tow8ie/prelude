@@ -19,6 +19,8 @@
     (kill-region (point) (mark))
     (backward-kill-word 1)))
 
+; Keybindings
+
 ;; Set Ctrl-w to backward-kill-word as described in Steve Yegge’s post
 ;; “Effective Emacs”: https://sites.google.com/site/steveyegge2/effective-emacs
 ;; But bound it to a variant as described in the following post that preserves
@@ -26,3 +28,5 @@
 ;; http://ruslanspivak.com/2010/09/22/c-w-to-delete-word-backward-in-conkeror/
 (global-set-key (kbd "C-w") 'kill-region-or-word)
 
+(global-set-key (kbd "C-+") 'sanityinc/increase-default-font-height)
+(global-set-key (kbd "C--") 'sanityinc/decrease-default-font-height)
