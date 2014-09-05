@@ -1,10 +1,15 @@
 (prelude-require-packages '(solarized-theme))
+(prelude-require-packages 'paredit)
 
 (setq mac-option-modifier 'none
       mac-command-modifier 'meta
       mac-right-command-modifier 'super)
 
 (load-theme 'solarized-dark t)
+
+; Hooks
+
+(add-hook 'clojure-mode-hook 'paredit-mode)
 
 (defun kill-region-or-word ()
   "Call `kill-region' or `backward-kill-word' depending on whether or not a region is selected."
