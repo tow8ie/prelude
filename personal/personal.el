@@ -1,5 +1,6 @@
 (prelude-require-packages '(solarized-theme))
 (prelude-require-packages 'paredit)
+(prelude-require-packages 'neotree)
 
 (setq mac-option-modifier 'none
       mac-command-modifier 'meta
