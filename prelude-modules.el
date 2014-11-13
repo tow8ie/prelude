@@ -3,6 +3,7 @@
 
 (require 'prelude-ido) ;; Super charges Emacs completion for C-x C-f and more
 (require 'prelude-company)
+(require 'prelude-evil)
 
 ;;; Programming languages support
 (require 'prelude-clojure)
