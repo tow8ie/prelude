@@ -1,12 +1,16 @@
 (prelude-require-packages '(solarized-theme))
 (prelude-require-packages '(paredit))
 (prelude-require-packages '(neotree))
+(prelude-require-package 'key-chord)
 
 (setq mac-option-modifier 'none
       mac-command-modifier 'meta
       mac-right-command-modifier 'super)
 
 (load-theme 'solarized-dark t)
+
+(require 'key-chord)
+(key-chord-mode 1)
 
 ; Hooks
 
@@ -18,6 +22,10 @@
   (if (and transient-mark-mode mark-active)
     (kill-region (point) (mark))
     (backward-kill-word 1)))
+
+; Key chords
+
+(key-chord-define evil-insert-state-map "kj" 'evil-normal-state)
 
 ; Keybindings
 
